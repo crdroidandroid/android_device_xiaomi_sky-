@@ -26,6 +26,9 @@ aaudio.hw_burst_min_usec=2000
 ro.sf.blurs_are_expensive=0
 ro.surface_flinger.supports_background_blur=0
 
+# Fuse
+persist.sys.fuse.passthrough.enable=true
+
 # Radio
 persist.vendor.radio.hidl_dev_service=true
 ro.vendor.radio.5g=3
