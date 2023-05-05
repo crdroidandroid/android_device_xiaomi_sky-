@@ -74,3 +74,6 @@ on property:vendor.fps_hal.restartimes=max
 
 on property:sys.boot_completed=1
     write /sys/class/thermal/thermal_message/sconfig 500
+
+on property:persist.sys.xtra-daemon.enabled=*
+    restart loc_launcher
