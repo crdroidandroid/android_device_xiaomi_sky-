@@ -105,17 +105,6 @@ ALL_DEFAULT_INSTALLED_MODULES += \
 	$(RFS_MSM_SLPI_SYMLINKS) \
 	$(RFS_MSM_WPSS_SYMLINKS)
 
-WLAN_FIRMWARE_SYMLINKS := $(TARGET_OUT_VENDOR)/firmware/wlan/qca_cld/adrastea/
-$(WLAN_FIRMWARE_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
-	@echo "Creating WLAN firmware symlinks: $@"
-	@rm -rf $@/*
-	@mkdir -p $@
-	$(hide) ln -sf /vendor/etc/wifi/adrastea/WCNSS_qcom_cfg.ini $@/WCNSS_qcom_cfg.ini
-	$(hide) ln -sf /mnt/vendor/persist/adrastea/wlan_mac.bin $@/wlan_mac.bin
-
-ALL_DEFAULT_INSTALLED_MODULES += \
-	$(WLAN_FIRMWARE_SYMLINKS)
-
 IMS_LIBS := libimscamera_jni.so libimsmedia_jni.so
 IMS_SYMLINKS := $(addprefix $(TARGET_OUT_SYSTEM_EXT_APPS_PRIVILEGED)/ims/lib/arm64/,$(notdir $(IMS_LIBS)))
 $(IMS_SYMLINKS): $(LOCAL_INSTALLED_MODULE)

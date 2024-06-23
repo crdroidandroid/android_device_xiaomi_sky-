@@ -605,6 +605,11 @@ PRODUCT_PACKAGES += \
     wpa_supplicant \
     wpa_supplicant.conf
 
+# WiFi firmware symlinks
+PRODUCT_PACKAGES += \
+    symlink_wlan_cfg_adrastea \
+    symlink_wlan_fw_adrastea
+
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/adrastea/WCNSS_qcom_cfg.ini
 
