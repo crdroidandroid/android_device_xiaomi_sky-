@@ -62,6 +62,9 @@ function blob_fixup() {
         vendor/bin/sensors-qesdk)
             "${PATCHELF}" --replace-needed "libprotobuf-cpp-lite-3.9.1.so" "libprotobuf-cpp-full-3.9.1.so" "${2}"
             ;;
+        vendor/etc/seccomp_policy/atfwd@2.0.policy)
+            grep -q "gettid: 1" "${2}" || echo "gettid: 1" >> "${2}"
+            ;;
         vendor/etc/media_codecs_ravelin.xml)
             sed -i -E '/media_codecs_(google_audio|google_c2|google_telephony|vendor_audio)/d' "${2}"
             ;;
