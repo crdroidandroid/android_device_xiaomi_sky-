@@ -1,0 +1,30 @@
+get_prop(system_app, persist_lcd_prop)
+set_prop(system_app, persist_lcd_prop)
+
+# Allow system_app to find *_service
+allow system_app {
+  app_api_service
+  audio_service
+  audioserver_service
+  cameraserver_service
+  drmserver_service
+  mediaextractor_service
+  mediametrics_service
+  mediaserver_service
+}:service_manager find;
+
+# Allow system_app read and write /data/data subdirectory
+allow system_app system_app_data_file:dir create_dir_perms;
+allow system_app system_app_data_file:{ file lnk_file } create_file_perms;
+
+# Allow binder communication with gpuservice
+binder_call(system_app, gpuservice)
+
+# Allow system_app to read and write to cgroup/sysfs_leds/sysfs_thermal
+allow system_app sysfs_leds:dir search;
+#allow system_app vendor_sysfs_graphics:dir search;
+allow system_app {
+  cgroup
+  sysfs_leds
+  sysfs_thermal
+}:{ file lnk_file } rw_file_perms;
