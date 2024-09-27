@@ -28,5 +28,8 @@ vendor_public_prop(vendor_nfc_mi_prop)
 # Panel
 vendor_public_prop(vendor_panel_info_prop)
 
+# Power HAL
+vendor_public_prop(vendor_power_prop);
+
 # Thermal
 vendor_public_prop(vendor_thermal_normal_prop)
