@@ -275,54 +275,8 @@ on property:sys.boot_completed=1
     start  vendor.qvirtmgr
     setprop vendor.powerhal.init 1
 
-#mmitest loopback
-service loopback_mainmic_hs /vendor/bin/audio-mmitest-ftm -tc 250 -d 180
-    user root
-    group root
-    disabled
-        oneshot
-
-on property:debug.mmitest.loopback.mainmic_hs=1
-        start loopback_mainmic_hs
-
-on property:debug.mmitest.loopback.mainmic_hs=0
-        stop loopback_mainmic_hs
-        exec /vendor/bin/audio-mmitest-ftm -tc 250 -st 0
-
-service loopback_hsmic_rcv /vendor/bin/audio-mmitest-ftm -tc 251 -d 180
-    user root
-    group root
-    disabled
-        oneshot
-
 service mi_thermald /system/vendor/bin/mi_thermald
     class main
     user root
     group system
     seclabel u:r:mi_thermald:s0
-
-on property:debug.mmitest.loopback.hsmic_rcv=1
-        start loopback_hsmic_rcv
-
-on property:debug.mmitest.loopback.hsmic_rcv=0
-        stop loopback_hsmic_rcv
-        exec /vendor/bin/audio-mmitest-ftm -tc 251 -st 0
-
-service loopback_hsmic_spk /vendor/bin/audio-mmitest-ftm -tc 252 -d 180
-    user root
-    group root
-    disabled
-        oneshot
-
-on property:debug.mmitest.loopback.hsmic_spk=1
-        start loopback_hsmic_spk
-
-on property:debug.mmitest.loopback.hsmic_spk=0
-        stop loopback_hsmic_spk
-        exec /vendor/bin/audio-mmitest-ftm -tc 252 -st 0
-
-#panel-info-sh
-service panel-info-sh /system/vendor/bin/sh /vendor/etc/init.panel_info.sh
-    class core
-    user root
-    oneshot
