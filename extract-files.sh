@@ -57,6 +57,12 @@ fi
 
 function blob_fixup() {
     case "${1}" in
+        system_ext/lib64/libwfdmmsrc_system.so)
+            grep -q "libgui_shim.so" "${2}" || "${PATCHELF}" --add-needed "libgui_shim.so" "${2}"
+            ;;
+        system_ext/lib64/libwfdnative.so)
+            grep -q "libinput_shim.so" "${2}" || "${PATCHELF}" --add-needed "libinput_shim.so" "${2}"
+            ;;
         system_ext/lib64/libwfdservice.so)
             "${PATCHELF}" --replace-needed "android.media.audio.common.types-V2-cpp.so" "android.media.audio.common.types-V3-cpp.so" "${2}"
             ;;
