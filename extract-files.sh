@@ -56,8 +56,11 @@ fi
 
 function blob_fixup() {
     case "${1}" in
-        vendor/bin/hw/android.hardware.security.keymint-service-qti)
+        vendor/bin/hw/android.hardware.security.keymint-service-qti|vendor/lib64/libqtikeymint.so)
             "${PATCHELF}" --add-needed "android.hardware.security.rkp-V1-ndk.so" "${2}"
+            "${PATCHELF}" --replace-needed "android.hardware.security.keymint-V1-ndk_platform.so" "android.hardware.security.keymint-V1-ndk.so" "${2}"
+            "${PATCHELF}" --replace-needed "android.hardware.security.secureclock-V1-ndk_platform.so" "android.hardware.security.secureclock-V1-ndk.so" "${2}"
+            "${PATCHELF}" --replace-needed "android.hardware.security.sharedsecret-V1-ndk_platform.so" "android.hardware.security.sharedsecret-V1-ndk.so" "${2}"
             ;;
         vendor/bin/sensors.qti)
             "${PATCHELF}" --replace-needed "libprotobuf-cpp-lite-3.9.1.so" "libprotobuf-cpp-full-3.9.1.so" "${2}"
@@ -136,9 +139,6 @@ function blob_fixup() {
             ;;
 	vendor/lib64/libhme.so)
             "${PATCHELF}" --replace-needed "libstdc++.so" "libstdc++_vendor.so" "${2}"
-            ;;
-        vendor/lib64/libqtikeymint.so)
-            "${PATCHELF}" --add-needed "android.hardware.security.rkp-V1-ndk.so" "${2}"
             ;;
         vendor/lib64/vendor.libdpmframework.so)
             "${PATCHELF}" --add-needed "libhidlbase_shim.so" "${2}"
