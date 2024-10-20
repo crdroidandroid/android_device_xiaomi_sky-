@@ -619,7 +619,7 @@ system_ext/lib64/vendor.qti.diaghal@1.0.so
 vendor/bin/diag-router
 vendor/etc/init/vendor.qti.diag.rc
 vendor/etc/vintf/manifest/vendor.qti.diag.hal.service.xml
-vendor/lib64/vendor.qti.diaghal@1.0.so
+vendor/lib64/vendor.qti.diaghal@1.0.so;MODULE=vendor.qti.diaghal@1.0-vendor
 
 # Display HDR - from ingot-user 14 UKQ1.231121.127 127 release-keys
 vendor/lib64/libgame_enhance.so|4432e47d990e98edb141becc345a92d03df26bf4
