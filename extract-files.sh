@@ -87,6 +87,9 @@ function blob_fixup() {
         vendor/lib64/hw/fingerprint.fpc.default.so)
             "${PATCHELF}" --replace-needed "com.fingerprints.extension@1.0.so" "com.fingerprints.extension@1.0_vendor.so" "${2}"
             ;;
+        vendor/lib64/libcamximageformatutils.so)
+            "${PATCHELF}" --replace-needed "vendor.qti.hardware.display.config-V2-ndk_platform.so" "vendor.qti.hardware.display.config-V2-ndk.so" "${2}"
+            ;;
         vendor/lib64/libqshcamera.so)
             "${PATCHELF}" --replace-needed "libprotobuf-cpp-lite-3.9.1.so" "libprotobuf-cpp-full-3.9.1.so" "${2}"
             ;;

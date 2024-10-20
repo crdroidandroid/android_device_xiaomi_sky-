@@ -430,7 +430,6 @@ vendor/lib64/libtfestriping.so
 vendor/lib64/libthreadutils.so
 vendor/lib64/libubifocus.so
 vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so
-vendor/lib64/vendor.qti.hardware.display.config-V2-ndk_platform.so
 
 # Camera firmware
 vendor/firmware/CAMERA_ICP.b00
