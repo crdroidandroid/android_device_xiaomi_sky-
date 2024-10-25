@@ -87,6 +87,9 @@ function blob_fixup() {
         vendor/etc/seccomp_policy/c2audio.vendor.ext-arm64.policy)
             grep -q "setsockopt: 1" "${2}" || echo "setsockopt: 1" >> "${2}"
             ;;
+        vendor/etc/seccomp_policy/wfdhdcphalservice.policy)
+            grep -q "gettid: 1" "${2}" || echo "gettid: 1" >> "${2}"
+            ;;
         vendor/etc/media_codecs_ravelin.xml)
             sed -i -E '/media_codecs_(google_audio|google_c2|google_telephony|vendor_audio)/d' "${2}"
             ;;
