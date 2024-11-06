@@ -306,6 +306,7 @@ PRODUCT_PACKAGES += \
 
 # Media
 PRODUCT_PACKAGES += \
+    libavservices_minijail.vendor \
     libcodec2_hidl@1.0.vendor \
     libsfplugin_ccodec_utils.vendor
 
