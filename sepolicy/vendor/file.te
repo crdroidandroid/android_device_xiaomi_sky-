@@ -28,6 +28,9 @@ type vendor_ins_vendor_data_file, data_file_type, file_type;
 # Mac Address
 type vendor_mac_vendor_data_file, data_file_type, file_type, mlstrustedobject;
 
+# Palm Sensor
+type vendor_sysfs_palm, sysfs_type, fs_type;
+
 # Proximity
 type proc_proximity_ts, proc_type, fs_type;
 

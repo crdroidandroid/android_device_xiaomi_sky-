@@ -13,6 +13,9 @@ genfscon sysfs /devices/platform/soc/soc:goodix_fp                              
 genfscon sysfs /devices/platform/soc/soc:fingerprint_goodix                     u:object_r:vendor_sysfs_fingerprint:s0
 genfscon sysfs /devices/platform/soc/soc:fingerprint_fpc                        u:object_r:vendor_sysfs_fingerprint:s0
 
+# Palm Sensor
+genfscon sysfs /devices/virtual/touch/touch_dev/palm_sensor  u:object_r:vendor_sysfs_palm:s0
+
 # Proximity
 genfscon proc /touchscreen/proximity_switch            u:object_r:proc_proximity_ts:s0
 genfscon proc /touchscreen/store_data_proximity        u:object_r:proc_proximity_ts:s0
