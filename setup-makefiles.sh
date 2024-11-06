@@ -55,10 +55,15 @@ function lib_to_package_fixup_vendor_variants() {
         com.qualcomm.qti.dpm.api@1.0)
             echo "$1-vendor"
             ;;
+        libagm | \
+        libagmclient | \
+        libagmmixer | \
+        libar-pal | \
         libpalclient | \
         libsndcardparser | \
         libwpa_client | \
-        libwfdaac_vendor)
+        libwfdaac_vendor | \
+        vendor.qti.hardware.pal@1.0-impl)
             ;;
         *)
             return 1
