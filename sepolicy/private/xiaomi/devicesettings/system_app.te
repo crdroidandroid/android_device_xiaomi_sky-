@@ -20,11 +20,10 @@ allow system_app system_app_data_file:{ file lnk_file } create_file_perms;
 # Allow binder communication with gpuservice
 binder_call(system_app, gpuservice)
 
-# Allow system_app to read and write to cgroup/sysfs_leds/sysfs_thermal
+# Allow system_app to read and write to cgroup/sysfs_thermal
 allow system_app sysfs_leds:dir search;
 #allow system_app vendor_sysfs_graphics:dir search;
 allow system_app {
   cgroup
-  sysfs_leds
   sysfs_thermal
 }:{ file lnk_file } rw_file_perms;
