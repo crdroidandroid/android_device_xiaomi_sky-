@@ -4,7 +4,6 @@ set_prop(system_app, persist_lcd_prop)
 # Allow system_app to find *_service
 allow system_app {
   app_api_service
-  audio_service
   audioserver_service
   cameraserver_service
   drmserver_service

@@ -22,7 +22,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
 
-import org.lineageos.settings.dirac.DiracUtils;
 import org.lineageos.settings.display.LcdFeaturesService;
 import org.lineageos.settings.thermal.ThermalUtils;
 
@@ -35,7 +34,6 @@ public class BootCompletedReceiver extends BroadcastReceiver {
     public void onReceive(final Context context, Intent intent) {
         if (DEBUG) Log.d(TAG, "Received boot completed intent");
         ThermalUtils.startService(context);
-        new DiracUtils(context).onBootCompleted();
         context.startService(new Intent(context, LcdFeaturesService.class));
     }
 }
