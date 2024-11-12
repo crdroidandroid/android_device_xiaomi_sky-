@@ -106,8 +106,8 @@ BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_CMDLINE := \
     video=vfb:640x400,bpp=32,memsize=3072000 \
     disable_dma32=on \
-    swinfo.fingerprint=$(BLISS_VERSION) \
-    mtdoops.fingerprint=$(BLISS_VERSION)
+    swinfo.fingerprint=$(LINEAGE_VERSION) \
+    mtdoops.fingerprint=$(LINEAGE_VERSION)
 
 BOARD_BOOTCONFIG := \
     androidboot.hardware=qcom \
@@ -265,7 +265,7 @@ DEVICE_MANIFEST_RAVELIN_FILES := \
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
     $(DEVICE_PATH)/configs/vintf/vendor_framework_compatibility_matrix.xml \
     $(DEVICE_PATH)/configs/vintf/xiaomi_framework_compatibility_matrix.xml \
-    vendor/bliss/config/device_framework_matrix.xml
+    vendor/lineage/config/device_framework_matrix.xml
 ODM_MANIFEST_SKUS += hceese hcesim hcesim1 hcesim1ese hcesimese
 ODM_MANIFEST_HCEESE_FILES := $(DEVICE_PATH)/configs/vintf/manifest_hceese.xml
 ODM_MANIFEST_HCESIM_FILES := $(DEVICE_PATH)/configs/vintf/manifest_hcesim.xml

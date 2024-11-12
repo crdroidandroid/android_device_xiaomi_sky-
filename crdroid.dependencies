@@ -1,0 +1,12 @@
+[
+  {
+    "repository": "crdroidandroid/android_kernel_xiaomi_sky",
+    "target_path": "device/xiaomi/sky-kernel",
+    "branch": "15.0"
+  },
+  {
+    "repository": "crdroidandroid/android_vendor_xiaomi_sky",
+    "target_path": "vendor/xiaomi/sky",
+    "branch": "15.0"
+  }
+]
