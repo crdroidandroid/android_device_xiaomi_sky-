@@ -320,9 +320,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
 
-# Properties
-include $(DEVICE_PATH)/configs/properties/default.mk
-
 # Rootdir
 PRODUCT_PACKAGES += \
     charger_fw_fstab.qti \
