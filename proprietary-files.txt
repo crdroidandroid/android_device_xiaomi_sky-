@@ -1456,6 +1456,7 @@ vendor/bin/subsystem_ramdump
 vendor/bin/mi_thermald
 vendor/bin/thermal-engine-v2
 vendor/etc/init/init_thermal-engine-v2.rc
+vendor/lib64/libthermalclient.so
 
 # Thermal configs - from hyperos (modified)
 vendor/etc/thermal-hp-normal-global.conf|9eca7d25acdfb189dd15e8276203e77ddb9361fd
