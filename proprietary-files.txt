@@ -98,7 +98,6 @@ vendor/lib64/soundfx/libvisualizer.so
 
 # Audio configs
 vendor/etc/audio/sku_ravelin/audio_effects.conf
-vendor/etc/audio/sku_ravelin/audio_effects.xml
 vendor/etc/audio/sku_ravelin/mixer_paths_ravelin_idp.xml
 vendor/etc/audio/sku_ravelin/mixer_paths_ravelin_qrd.xml
 vendor/etc/audio/sku_ravelin/resourcemanager_ravelin_idp.xml
