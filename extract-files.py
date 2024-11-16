@@ -29,6 +29,7 @@ from extract_utils.main import (
 namespace_imports = [
     'device/xiaomi/sky',
     'hardware/qcom-caf/sm8450',
+    'hardware/qcom-caf/sm8450/audio/agm/ipc/HwBinders/legacy',
     'hardware/qcom-caf/wlan',
     'hardware/xiaomi',
     'vendor/qcom/opensource/commonsys/display',
