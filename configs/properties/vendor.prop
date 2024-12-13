@@ -181,6 +181,7 @@ persist.sys.miui.camera.protect_prev_ext=true
 # Display
 vendor.display.comp_mask=0
 vendor.display.disable_3d_adaptive_tm=1
+vendor.display.disable_dynamic_sf_idle=1
 vendor.display.disable_excl_rect=0
 vendor.display.disable_excl_rect_partial_fb=1
 vendor.display.disable_hw_recovery_dump=1
@@ -260,7 +261,6 @@ vendor.gralloc.disable_ubwc=0
 debug.c2.use_dmabufheaps=1
 debug.mdpcomp.logs=0
 debug.stagefright.c2inputsurface=-1
-vendor.mm.enable.qcom_parser=16777215
 vendor.media.omx=0
 
 # Misc
